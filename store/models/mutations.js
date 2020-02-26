@@ -1,6 +1,8 @@
 export default {
-    setModels (state, models) {
-      state.models = models
-    }
+  add (state, model) {
+    state.models.push(model)
+  },
+  clear (state) {
+    state.models = []
   }
-  
+}

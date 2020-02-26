@@ -1,14 +1,11 @@
 <script>
 import Matrix from './Matrix'
-
 export default {
   inject: ['provider'],
   render () {
     if(!this.provider.context) return;
     const gl = this.provider.context;
-
     /*================= Drawing ===========================*/
-    
     const _matrix = new Matrix()
     var dt = this.provider.time-this.provider.time_old;
     _matrix.rotateZ(this.provider.mov_matrix, dt);

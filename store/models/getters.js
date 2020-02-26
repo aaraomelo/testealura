@@ -1,5 +1,5 @@
 export default {
-    getModels(state) {
-      return state.models
-    }
+  get(state) {
+    return state.models
   }
+}

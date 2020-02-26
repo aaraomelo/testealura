@@ -14,13 +14,10 @@
 <script>
 import MyCanvas from './MyCanvas';
 import MyBox from './MyBox';
-
 export default {
   components: {
     MyCanvas,
     MyBox
-  },
-  mounted(){
   },
   props: { 
     model: Object

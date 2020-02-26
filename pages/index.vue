@@ -18,24 +18,13 @@
 <script>
 import Window from '../components/Window';
 import { mapGetters } from 'vuex'
-
 export default {
-  middleware: 'models',
+  middleware: 'models/download',
+  computed: mapGetters({
+    models: 'models/get'
+  }),  
   components: {
     Window
-  },
-  methods:{
-    
-  },
-  computed: mapGetters({
-    models: 'models/getModels'
-  }), 
-  mounted () {
-
-  },
-  data () {
-    return {
-    }
   }
 }
 </script>

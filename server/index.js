@@ -1,6 +1,5 @@
 const express = require('express')
 const consola = require('consola')
-var bodyParser = require('body-parser')
 const { Nuxt, Builder } = require('nuxt')
 const app = express()
 
@@ -23,10 +22,6 @@ async function start () {
   }
 
   // Give nuxt middleware to express
-  app.use(bodyParser.json())
-  const files = require('./routes/api/models')
-  app.use('/api/models', files)
-  
   app.use(nuxt.render)
 
   // Listen the server
